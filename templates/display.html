@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Food Receipe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    
+    <!-- Core Stylesheet -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-6">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Hello Food Lovers</a></li>
+                                    <li><a href="#">Come take a look at new receipes</a></li>
+                                    <li><a href="#">Create something new!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Social Info -->
+                    <div class="col-12 col-sm-6">
+                        <div class="top-social-info text-right">
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="/"><img src="../static/img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <h3 style="text-align:center; color:teal;">Search Filters</h3>
+                                    <li><a href="/filter1">Food origins</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Chinese</a></li>-->
+                                        <!--    <li><a href="about.html">Malay</a></li>-->
+                                        <!--    <li><a href="blog-post.html">Indian</a></li>-->
+                                        <!--    <li><a href="receipe-post.html">English</a></li>-->
+                                    </li>
+                                   <!--</ul>         -->
+                                     <li><a href="/filter2">Dish Type</a>
+                                        <!--<ul class="dropdown">-->
+                                            <!--<li><a href="contact.html">Main Course</a></li>-->
+                                            <!--<li><a href="about.html">Appetizers</a></li>-->
+                                            <!--<li><a href="blog-post.html">Desserts</a></li>-->
+                                      </li>
+                                        <!--</ul>-->
+                                       <li><a href="/filter3">Dietary Requirements</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Vegan</a></li>-->
+                                        <!--    <li><a href="about.html">No Dairy</a></li>-->
+                                        <!--    <li><a href="blog-post.html">No Nuts</a></li>-->
+                                            
+                                      </li>
+                                        <!--</ul>-->
+                                       <li><a href="/filter4">Difficulty Level</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Easy</a></li>-->
+                                        <!--    <li><a href="about.html">Moderate</a></li>-->
+                                        <!--    <li><a href="blog-post.html">Hard</a></li>-->
+                                            
+                                      </li>
+                                        <!--</ul>-->
+                                         <li><a href="/search">Multi-Criteria</a>
+                                         </li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <!--<div class="search-btn">-->
+                                <!--    <i class="fa fa-search" aria-hidden="true"></i>-->
+                                <!--</div>-->
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+<ul class='border'>
+    <br/>
+    <div style='text-align:center; font-size: 20px;'>
+    <p style='margin: 0px 10px 10px 10px; padding-left: 10px; font-size: 50px; color: #ff95bf;'>{{all_receipe['title']}}</p>
+    <p style='color: #ff8961; font-size: 20px;'><i>~ An authentic {{all_receipe['origins']}} {{all_receipe['dish']}} ~</i></p>
+    <p style='color: #ff8599;'>^ Created by {{all_receipe['author']}} ^</p> 
+    <p style="color: black;">Difficulty Level: {{all_receipe['difficulty']}}</p>
+    <p style='color: green;'>{{all_receipe['diet']}} Dish</p>
+    
+    </div>
+    <div style='color: #616cff; text-align: center; font-size: 20px;'>
+    <b>Ingredients List</b>
+    
+    <p style='color: #616cff; text-align: left; border: solid 1px; margin: 10px 600px 10px 600px; padding-left: 10px;'> {% autoescape false %}{{all_receipe['inlist'] | replace("\n", "<br/>")}}{% endautoescape %}</p>
+    <br/>
+    <div style='color: teal;'>
+    <b>Instructions</b>
+    <p style='color: teal; text-align: justify; border: solid 1px; margin: 10px 100px 10px 100px; padding: 20px; 0px 10px 0px;'> {% autoescape false %}{{all_receipe['instruct'] | replace("\n", "<br/>")}}{% endautoescape %}</p>
+     </div>
+     </div>
+     <br/>
+     <button><a style="text-decoration:none" href='/edit/{{all_receipe._id}}' id="edit">Edit</a></button>
+    <button><a style="text-decoration:none" href='/delete/{{all_receipe._id}}' id="delete">Delete</a></button>
+    <input type="button" value="Return to previous page >>" onClick="javascript:history.go(-1)" />
+    <br/><br/>
+
+
+</ul>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="static/img/core-img/logo.png" alt=""></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="static/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="static/js/active.js"></script>
+
+</body>
+
+</html>

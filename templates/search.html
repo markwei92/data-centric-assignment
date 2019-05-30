@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Food Receipe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    
+    <!-- Core Stylesheet -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="static/img/core-img/salad.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <!--<div class="search-wrapper">-->
+        <!-- Close Btn -->
+    <!--    <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>-->
+
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-12">-->
+    <!--                <form action="#" method="post">-->
+    <!--                    <input type="search" name="search" placeholder="Type in name of receipe...">-->
+    <!--                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>-->
+    <!--                </form>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-6">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Hello Food Lovers</a></li>
+                                    <li><a href="#">Come take a look at new receipes</a></li>
+                                    <li><a href="#">Create something new!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Social Info -->
+                    <div class="col-12 col-sm-6">
+                        <div class="top-social-info text-right">
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="/"><img src="static/img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <h3 style="text-align:center; color:teal;">Search Filters</h3>
+                                    <li><a href="filter1">Food origins</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Chinese</a></li>-->
+                                        <!--    <li><a href="about.html">Malay</a></li>-->
+                                        <!--    <li><a href="blog-post.html">Indian</a></li>-->
+                                        <!--    <li><a href="receipe-post.html">English</a></li>-->
+                                    </li>
+                                   <!--</ul>         -->
+                                     <li><a href="filter2">Dish Type</a>
+                                        <!--<ul class="dropdown">-->
+                                            <!--<li><a href="contact.html">Main Course</a></li>-->
+                                            <!--<li><a href="about.html">Appetizers</a></li>-->
+                                            <!--<li><a href="blog-post.html">Desserts</a></li>-->
+                                      </li>
+                                        <!--</ul>-->
+                                       <li><a href="filter3">Dietary Requirements</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Vegan</a></li>-->
+                                        <!--    <li><a href="about.html">No Dairy</a></li>-->
+                                        <!--    <li><a href="blog-post.html">No Nuts</a></li>-->
+                                            
+                                      </li>
+                                        <!--</ul>-->
+                                       <li><a href="filter4">Difficulty Level</a>
+                                        <!--<ul class="dropdown">-->
+                                        <!--    <li><a href="contact.html">Easy</a></li>-->
+                                        <!--    <li><a href="about.html">Moderate</a></li>-->
+                                        <!--    <li><a href="blog-post.html">Hard</a></li>-->
+                                            
+                                      </li>
+                                        <!--</ul>-->
+                                         <li><a href="search">Multi-Criteria</a>
+                                         </li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <!--<div class="search-btn">-->
+                                <!--    <i class="fa fa-search" aria-hidden="true"></i>-->
+                                <!--</div>-->
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<h3 style='text-align:center; color:green;'>Search by Multi-Criteria</h3>
+<form method ='POST'>
+    
+    <!--<div>-->
+    <!--    <input type='text' placeholder='Enter receipe title' name='title' />-->
+    <!--</div>-->
+    
+    <!--    <div class="search">-->
+    <!--<form method="GET">-->
+    <!--<input type='text' placeholder="Search terms" name="search_terms">-->
+    <!--<input type='submit', value='search'>-->
+    <!--</div>-->
+        <div>
+        <label>Origins:</label>
+        <br/>
+        <select name='origins' multiple>
+        {% for c in food_origins %}
+        <option>{{c['name']}}</option>
+        {% endfor %}
+        </select>
+        <br/><br/>
+    </div>
+       <br/><br/>
+        <div>
+        <label>Dish Type:</label>
+        <br/>
+        <select name='dish' multiple>
+        {% for z in dish %}
+        <option>{{z['name']}}</option>
+        {% endfor %}
+        </select>
+        <br/><br/>
+    </div>
+    <br/><br/>
+        <div>
+        <label>Diet Requirements:</label>
+        <br/>
+        <select name='diet' multiple>
+        {% for a in diet %}
+        <option>{{a['name']}}</option>
+        {% endfor %}
+        </select>
+        <br/><br/>
+    </div>
+    <br/><br/>
+                <div>
+        <label>Difficulty:</label>
+        <br/>
+        <select name='difficulty' multiple>
+        {% for t in diff_lvl %}
+        <option>{{t['name']}}</option>
+        {% endfor %}
+        </select>
+        <br/><br/>
+    </div>
+    
+    
+    <!--   <div>-->
+    <!--    <label>Origins:</label>-->
+    <!--    <br/>-->
+    <!--    <select name=origins multiple>-->
+    <!--        {% for e in food_origins %}-->
+    <!--        <option>{{e['name']}}</option>-->
+    <!--        {% endfor %}-->
+    <!--    </select>-->
+    <!--</div>-->
+    <br/><br/>
+        <div id="submit">
+        <input type='submit'/>
+         
+    </div>
+    <br/>
+    <h4 style='text-align:center;'>-Search Results-</h4>
+    <br/>
+<ul>
+{% for t in receipe_collection %}
+<li class='border'>
+<br/>
+    <p><b>Title:</b> {{t['title']}}</p>
+    <!--<p><b>Author:</b> {{t['author']}}</p>-->
+    <p><b>Origins:</b> {{t['origins']}}</p>
+    <p><b>Type:</b> {{t['dish']}}</p>
+    <!--<p><b>Diet Requirements:</b> {{t['diet']}}</p>-->
+    <!--<p><b>Difficulty:</b> {{t['difficulty']}}</p>-->
+    <!--<p><b>Ingredients List:</b> {% autoescape false %}{{t['inlist'] | replace("\n", "<br/>")}}{% endautoescape %}</p>-->
+    <!--<p><b>Instructions:</b> {% autoescape false %}{{t['instruct'] | replace("\n", "<br/>")}}{% endautoescape %}</p>-->
+    <!--link that goes to another page and display all the info-->
+    
+<!--<button><a style="text-decoration:none" href='/edit/{{t._id}}' id="edit">Edit</a></button>-->
+<!--<button><a style="text-decoration:none" href='/delete/{{t._id}}' id="delete">Delete</a></button>-->
+<button><a style="text-decoration:none" href='/display/{{t._id}}' id="display">View Recipe</a></button>
+
+<br/><br/>
+</li>
+{% endfor %}
+</ul>
+</form>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="static/img/core-img/logo.png" alt=""></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="static/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="static/js/active.js"></script>
+
+</body>
+
+</html>

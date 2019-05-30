@@ -1,0 +1,12 @@
+<form method='POST'>
+    {% for c in receipe_collection %}
+    <input type="text" placeholder="Type in recipe title"/>
+    {% endfor %}
+    <input type="submit" value="Submit"/>
+</form>   
+    
+<ul>    
+    <p><b>Title:</b> {{c['title']}}</p>
+    <p><b>Origins:</b> {{c['origins']}}</p>
+    <p><b>Type:</b> {{c['dish']}}</p>
+</ul>
