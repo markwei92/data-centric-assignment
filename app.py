@@ -259,16 +259,20 @@ def display(allreceipe_id):
     receipe_from_db = receipe_collection.find_one({'_id': ObjectId(allreceipe_id)})
     return render_template('display.html', all_receipe=receipe_from_db)
     
-@app.route('/string', methods=['GET', 'POST'])
-def string():
-    receipe_collection = connection['receipedb']['all_receipe']
-    if (request.method =='GET'):
-        found=receipe_collection.find( { '$text': { '$search:' }} )
-        
-        return render_template('string.html', receipe_collection=found )
+# @app.route('/string', methods=['GET', 'POST'])
+# def string():
+#     receipe_collection = connection['receipedb']['all_receipe.title']
+   
+#     c = receipe_collection.find({})
+#     if (request.method =='GET'):
+#         found=receipe_collection.find( { '$text': { '$search': c }} )
+#         return render_template('string.html', receipe_collection=c )
     
-    else:
-        return
+#     else:
+#         receipe = connection['receipedb']['all_receipe']
+#         found = receipe_collection.find({}) 
+#         return render_template('string.html', receipe=found)
+        
     
 
 
