@@ -1,6 +1,6 @@
 1) Data Centric Cookbook Project
 
---Project Goal--
+Project Goal
 
 This is an online cookbook mobile web app that allow all users to add their own cooking recipes as a contribution to the community. 
 Therefore no login is required as users are expected to be respectful of one another's contribution; not to edit or delete without the author's permission. 
@@ -10,11 +10,11 @@ The main goal of this project is to get everyone to contribute back to society b
 
 2) UX
 
---Strategy--
+Strategy
 
 My strategy for the UX design was to create filters to allow easy sorting based on categories. The UX design is fairly simple and straightforward to use, the main page displays all the recipes and there are filters at the navbar whereby they can search based on category to whip up something simple or challenging.
 
---Navigation--
+Navigation
 
 [Logo]
 
