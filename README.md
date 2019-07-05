@@ -1,6 +1,6 @@
 1) Data Centric Cookbook Project
 
--Project Goal
+--Project Goal--
 
 This is an online cookbook mobile web app that allow all users to add their own cooking recipes as a contribution to the community. 
 Therefore no login is required as users are expected to be respectful of one another's contribution; not to edit or delete without the author's permission. 
@@ -10,17 +10,17 @@ The main goal of this project is to get everyone to contribute back to society b
 
 2) UX
 
--Strategy
+--Strategy--
 
 My strategy for the UX design was to create filters to allow easy sorting based on categories. The UX design is fairly simple and straightforward to use, the main page displays all the recipes and there are filters at the navbar whereby they can search based on category to whip up something simple or challenging.
 
--Navigation
+--Navigation--
 
-<Logo>
+[Logo]
 When loading up the front page, you will be greeted with a white screen with a nice logo which says 'Delicious Food Blog'. This logo icon when clicked will bring you back to the home page which we are currently viewing.
 
 
-<Search Filters Overview>
+[Search Filters Overview]
 On the home page we have the row of filters on the top right in which there is a large caption in teal stating search filters. Below the search filters are 5 different filters which you can click on to brin you the selected filter page, 'Food Origins', 'Dish Type', 'Dietary Requirements', 'Difficulty Level' and 'Multi-Criteria'. I will explain more in detail later on.
 
 
