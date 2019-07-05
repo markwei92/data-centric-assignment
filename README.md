@@ -49,8 +49,40 @@ Now we move onto the search filters page, each filters performs very similarly i
 
 All the filters work the same way except for the last filter on the right which says multi-criteria. This filter when clicked allows the user to filter by a selection of more than one criteria. This is especially good if the user wants to refine down to a very specific filter. The user however has to ensure all the filters are selected and cannot be left blank, otherwise when hitting the submit button, the app will display an error message. This wraps up how to navigate through the web app, if the user wishes to return to the homepage, he does not need to use the back button, rather he can just click on the logo icon on the top right to return back to all recipe where the user can view all the recipes or add recipes. For editing and deleting of recipes, the user can only perform those 2 functions when they are in the recipe view.
 
+3) Features
 
-3) Limitations
+I used simple category search filters as it is relatively straightforward and users can narrow in what they want through the search.
+Thereafter they can select the view recipe button to get a full loadout on the recipe.
+If its not to their liking the user can return back to search or choose a different search category.
+Users can also contribute by adding new recipes in the homepage and they can proceed to edit or delete the recipe in the view receipe page later on if necessary.
+
+4) App Testing
+
+For testing this web application, I did manual testing, I first tested the CRUD (Create, Read, Update, Delete) functions ensuring that the every update and creation is saved and properly reflected on the homepage as well as the search filters. To do this, in the homepage I first clicked on the add recipe button to ensure I was able to create a recipe, this will bring me to the add recipe page, whereby I will fill up all the information that is required of the user and hit the submit button, this will reroute me back to the main page. Scrolling through the main page I was able to find my newly added recipe. Next I tested the cancel button in the add recipe page, the result was that it brought me back to the homepage but this time without the recipe being saved into the database.
+
+
+[View Recipe, Edit & Delete Buttons Testing]
+
+Next I tested the view recipe button for one of the recipes, this will bring me to the corresponding recipe page that details down all the information about this recipe. I clicked on the edit button and made a change to each filter and textbox, the changes were saved using the save button and the recipe was updated properly in the homepage. Next I tested the delete button, which pops up a yes and no button, if I clicked yes, the recipe entry will be taken off the database, if I clicked no it will remain as it is and bring me back to the homepage. Lastly I tested the return to previous page button first, by viewing recipe through search filters, when I clicked on the previous page button it will bring me back to the search filter instead of the homepage.
+
+
+[Search Filters Testing]
+
+Next I tested the filter tabs by clicking on every individual filter to ensure that all of them is working as intended. For the first search filter located on the top I clicked on food origins which will route me to the food origins filter page, next I clicked on the Chinese, Malay, Indian and English tabs followed by the submit button to ensure each of them has their correct corresponding results by comparing them with the home page under all recipe to ensure that only recipes pertaining to that selected filter showed up. The last filter, the multi-criteria filter due to limitations can only perform the search if all the filters are selected, if one or more is excluded an error will display, likewise the results are compared with all recipes in the homepage to ensure the filters corresponded to every individual filter.
+
+5) Bugs Solved
+
+
+[Getting the database to link correctly with the html]
+
+Getting the data to be retrieved onto the ubuntu terminal was a simple task as it was taught in the code institute videos, however getting that same information displayed on the front end using html was more challenging and it took me many days to get the code working not only retrieving the data but also displaying them correctly in the desired format. Definitely a big accomplishment for me considering there were very little relevant materials on the web that provided information on how to do front end integration with MongoDB using the filter search. Alot of trial and error as well as adaptation based on other contributors solution.
+
+
+[Getting the view recipe page to load correctly]
+
+The view recipe page basically loads up all the information about the recipe, user uses the search filter function to find recipes, when first displayed it is in a basic form showing title, food origin and cruisine type. By clicking on the view recipe button below, it will bring the user to the view the entire recipe. This was not taught by code institute, therefore I had to do alot of improvisation looking at my code on editing recipe, using it to create a new set of code that will display the data of the recipe accordingly like how it would display when clicking the edit recipe button but this time without the ability to make amendments, but only for viewing purposes. This was also a challenging process but after several rounds of iteration, I finally managed to crack the code and have it work smoothly.
+
+6) Limitations
 
 [Bullet points and numbering for textbox in the 'add new recipe' page]
 
@@ -76,52 +108,11 @@ I was not able to input a text string search which I felt would be helpful to th
 
 The recipes do not have pictures or videos in the cookbook app as heroku is unable to store media files. I did alot of trial and error trying to get the app to be able to upload the media files to AWS but unfortunately the data is not able to retrieve and display correctly and as such I did not include them in my online cookbook app, this is definitely one I would need to improve and work on to make the app more vibrant.
 
-
-4) Features
-
-I used simple category search filters as it is relatively straightforward and users can narrow in what they want through the search.
-Thereafter they can select the view recipe button to get a full loadout on the recipe.
-If its not to their liking the user can return back to search or choose a different search category.
-Users can also contribute by adding new recipes in the homepage and they can proceed to edit or delete the recipe in the view receipe page later on if necessary.
-
-
-5) Frameworks Used
+7) Frameworks Used
 
 The project uses Flask framework and mongoDB database to store and integrate data with the frontend development. Programming languages for the frontend display of the web app cookbook includes HTML, CSS, Javascript and for the backend development Python is used. For development testing I used the cloud9 platform which has been officially been ported over to the AWS Cloud 9, and for deployment and display of code, I used Heroku and Github respectively.
 
-
-6) App Testing
-
-For testing this web application, I did manual testing, I first tested the CRUD (Create, Read, Update, Delete) functions ensuring that the every update and creation is saved and properly reflected on the homepage as well as the search filters. To do this, in the homepage I first clicked on the add recipe button to ensure I was able to create a recipe, this will bring me to the add recipe page, whereby I will fill up all the information that is required of the user and hit the submit button, this will reroute me back to the main page. Scrolling through the main page I was able to find my newly added recipe. Next I tested the cancel button in the add recipe page, the result was that it brought me back to the homepage but this time without the recipe being saved into the database.
-
-
-[View Recipe, Edit & Delete Buttons Testing]
-
-Next I tested the view recipe button for one of the recipes, this will bring me to the corresponding recipe page that details down all the information about this recipe. I clicked on the edit button and made a change to each filter and textbox, the changes were saved using the save button and the recipe was updated properly in the homepage. Next I tested the delete button, which pops up a yes and no button, if I clicked yes, the recipe entry will be taken off the database, if I clicked no it will remain as it is and bring me back to the homepage. Lastly I tested the return to previous page button first, by viewing recipe through search filters, when I clicked on the previous page button it will bring me back to the search filter instead of the homepage.
-
-
-[Search Filters Testing]
-
-Next I tested the filter tabs by clicking on every individual filter to ensure that all of them is working as intended. For the first search filter located on the top I clicked on food origins which will route me to the food origins filter page, next I clicked on the Chinese, Malay, Indian and English tabs followed by the submit button to ensure each of them has their correct corresponding results by comparing them with the home page under all recipe to ensure that only recipes pertaining to that selected filter showed up. The last filter, the multi-criteria filter due to limitations can only perform the search if all the filters are selected, if one or more is excluded an error will display, likewise the results are compared with all recipes in the homepage to ensure the filters corresponded to every individual filter.
-
-7) Bugs Solved
-
-
-[Getting the database to link correctly with the html]
-
-Getting the data to be retrieved onto the ubuntu terminal was a simple task as it was taught in the code institute videos, however getting that same information displayed on the front end using html was more challenging and it took me many days to get the code working not only retrieving the data but also displaying them correctly in the desired format. Definitely a big accomplishment for me considering there were very little relevant materials on the web that provided information on how to do front end integration with MongoDB using the filter search. Alot of trial and error as well as adaptation based on other contributors solution.
-
-
-[Getting the view recipe page to load correctly]
-
-The view recipe page basically loads up all the information about the recipe, user uses the search filter function to find recipes, when first displayed it is in a basic form showing title, food origin and cruisine type. By clicking on the view recipe button below, it will bring the user to the view the entire recipe. This was not taught by code institute, therefore I had to do alot of improvisation looking at my code on editing recipe, using it to create a new set of code that will display the data of the recipe accordingly like how it would display when clicking the edit recipe button but this time without the ability to make amendments, but only for viewing purposes. This was also a challenging process but after several rounds of iteration, I finally managed to crack the code and have it work smoothly.
-
-8) Deployment
-
-Deployed using Github for repository and documentation, for web app deployment I used Heroku for server hosting, hosting is relatively straightforward and quick to setup and connect. Followed the heroku hosting steps given on the code institute tutorial, very straightforward and easy to deploy.
-
-
-9) Technologies Used
+8) Technologies Used
 
 For this project, I am using the MongoDB Database in conjunction with python to store recipe information and also to be used for information retrieval later on.
 
@@ -129,6 +120,9 @@ For the backend integration with frontend I am using Jinja and Flask to connect 
 
 For the frontend development I used HTML, CSS and Javascript derived using a template from colorlib.
 
+9) Deployment
+
+Deployed using Github for repository and documentation, for web app deployment I used Heroku for server hosting, hosting is relatively straightforward and quick to setup and connect. Followed the heroku hosting steps given on the code institute tutorial, very straightforward and easy to deploy.
 
 10) Acknowledgement & Media
 
