@@ -54,7 +54,7 @@ All the filters work the same way except for the last filter on the right which 
 
 [Bullet points and numbering for textbox in the 'add new recipe' page]
 
-In the add recipe page the user will have to input their own numbering or bullet points as I did not have any segregation within the textbox, this is a limitation I'm working on as I have not found a suitable method to do it. Likewise for the instructions textbox below the ingredients textbox, users have to manually fill up all the details on how to cook the dish and the specific steps to take and the things to look out for when preparing this dish.
+In the add recipe page the user will have to input their own numbering or bullet points as I did not have any segregation within the textbox, this is a limitation I'm working on as I have not found a workable method to do it. Likewise for the instructions textbox below the ingredients textbox, users have to manually fill up all the details on how to cook the dish and the specific steps to take and the things to look out for when preparing this dish.
  
  
 [Pagination on homepage for all recipe display]
@@ -72,6 +72,11 @@ Under the Multi-Criteria filter I was not able to do selective filtering, meanin
 I was not able to input a text string search which I felt would be helpful to the user who already know what they were looking for, but given the limited resources available for MongoDB frontend integration and the difficulty of implementation and adaptation from various stackoverflow resources I could only do filter selection.
 
 
+[Including Media Files in the application]
+
+The recipes do not have pictures or videos in the cookbook app as heroku is unable to store media files. I did alot of trial and error trying to get the app to be able to upload the media files to AWS but unfortunately the data is not able to retrieve and display correctly and as such I did not include them in my online cookbook app, this is definitely one I would need to improve and work on to make the app more vibrant.
+
+
 4) Features
 
 I used simple category search filters as it is relatively straightforward and users can narrow in what they want through the search.
@@ -82,7 +87,7 @@ Users can also contribute by adding new recipes in the homepage and they can pro
 
 5) Frameworks Used
 
-The project uses Flask framework and mongoDB database to store and integrate data with the frontend development. Programming languages for the frontend display of the web app cookbook includes HTML, CSS, Javascript and for the backend development Python is used.
+The project uses Flask framework and mongoDB database to store and integrate data with the frontend development. Programming languages for the frontend display of the web app cookbook includes HTML, CSS, Javascript and for the backend development Python is used. For development testing I used the cloud9 platform which has been officially been ported over to the AWS Cloud 9, and for deployment and display of code, I used Heroku and Github respectively.
 
 
 6) App Testing
